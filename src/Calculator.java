@@ -136,19 +136,11 @@ public class Calculator implements ActionListener {
         }
         if(e.getSource()==eqlButton){
             num2=Double.parseDouble(jTextField.getText());
-            switch (operator){
-                case'+':
-                    result=num1+num2;
-                    break;
-                case'-':
-                    result=num1-num2;
-                    break;
-                case'*':
-                    result=num1*num2;
-                    break;
-                case'/':
-                    result=num1/num2;
-                    break;
+            switch (operator) {
+                case '+' -> result = num1 + num2;
+                case '-' -> result = num1 - num2;
+                case '*' -> result = num1 * num2;
+                case '/' -> result = num1 / num2;
             }
             jTextField.setText(String.valueOf(result));
             num1=result;
